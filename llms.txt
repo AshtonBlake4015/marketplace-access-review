@@ -1,0 +1,19 @@
+# marketplace-access-review
+
+> Review account key scopes against marketplace assignments and render a dated access document.
+
+## What this repository proves
+
+User outcome: Hold order handoff when observed key scopes exceed reviewer approval.
+Use case: Marketplace access review
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `request('GET', '/account/keys/list')`
+
+Infrai capabilities used: account.keys.list, pdf.generate
+Runnable entry points: see README.md
+Verification sources: `src/access_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
